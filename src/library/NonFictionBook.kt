@@ -1,7 +1,8 @@
 package library
 
-class NonFictionBook(title: String, author: String, ISBN: String, val genre: String, ) :
+class NonFictionBook(title: String, author: String, ISBN: Int, val subject: String, ) :
     Book(title, author, ISBN){
-    fun nonFiction() = println("This is a non fiction book in $genre")
-    fun displayNonfictionInfo() = println("${displayInfo()}, genre:  ")
+    fun nonFiction() = "\nThis is a non fiction book in $subject"
+
+    fun displayNonfictionInfo() = "${displayInfo()}, subject: $subject"
 }

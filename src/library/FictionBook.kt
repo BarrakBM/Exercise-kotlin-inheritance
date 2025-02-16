@@ -1,7 +1,7 @@
 package library
 
-class FictionBook(title: String, author: String, ISBN: String, val subject: String) :
+class FictionBook(title: String, author: String, ISBN: Int, val genre: String) :
     Book(title, author, ISBN){
-    fun fiction() = println("This is a fiction book in :$subject")
-    fun displayFictionInfo() = println("${displayInfo()}, subject:  ")
+    fun fiction() = "\nThis is a fiction book in :$genre"
+    fun displayFictionInfo() = "${displayInfo()}, genre: $genre"
 }
